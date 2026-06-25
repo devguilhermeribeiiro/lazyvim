@@ -1,4 +1,12 @@
 return {
+  vim.lsp.config("crystalline", {
+    cmd = { "crystalline" },
+    filetypes = { "crystal" },
+    root_markers = { "shard.yml", ".git" },
+  }),
+
+  vim.lsp.enable("crystalline"),
+
   {
     "neovim/nvim-lspconfig",
     opts = {
@@ -19,5 +27,10 @@ return {
         "crystal",
       },
     },
+  },
+
+  {
+    "vim-crystal/vim-crystal",
+    ft = "crystal",
   },
 }
