@@ -10,3 +10,16 @@ vim.g.lazyvim_python_ruff = "ruff"
 
 vim.g.lazyvim_ruby_lsp = "ruby_lsp"
 vim.g.lazyvim_ruby_formatter = "rubocop"
+
+if vim.env.TERM == "linux" then
+  vim.opt.termguicolors = false
+
+  vim.api.nvim_set_hl(0, "Normal", { ctermfg = 7, ctermbg = 0 })
+  vim.api.nvim_set_hl(0, "Comment", { ctermfg = 8 })
+  vim.api.nvim_set_hl(0, "Keyword", { ctermfg = 3, bold = true })
+  vim.api.nvim_set_hl(0, "Type", { ctermfg = 4, bold = true })
+  vim.api.nvim_set_hl(0, "Function", { ctermfg = 6 })
+  vim.api.nvim_set_hl(0, "String", { ctermfg = 2 })
+  vim.api.nvim_set_hl(0, "Constant", { ctermfg = 1 })
+  vim.api.nvim_set_hl(0, "Identifier", { ctermfg = 5 })
+end
